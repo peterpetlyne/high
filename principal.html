@@ -17,12 +17,16 @@
             background-color: #f8f9fa;
             color: #333;
             line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            flex: 1;
         }
         
         header {
@@ -49,7 +53,8 @@
         
         .principal-section {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
             gap: 40px;
             margin: 40px 0;
             background: white;
@@ -59,32 +64,29 @@
         }
         
         .photo-container {
-            flex: 1;
-            min-width: 300px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 100%;
         }
         
         .principal-photo {
             width: 100%;
             max-width: 380px;
             height: 450px;
-            background: linear-gradient(45deg, #e6e6e6, #f5f5f5);
-            border: 5px solid #1a5fb4;
-            border-radius: 10px;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            color: #888;
-            font-size: 0.9rem;
-            text-align: center;
-            padding: 20px;
             overflow: hidden;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="500" viewBox="0 0 400 500"><rect width="400" height="500" fill="%231a5fb4" opacity="0.1"/><path d="M200 150 C250 120 300 150 300 200 C300 250 250 280 200 250 C150 280 100 250 100 200 C100 150 150 120 200 150 Z" fill="%231a5fb4" opacity="0.3"/><text x="200" y="350" font-family="Arial" font-size="24" fill="%231a5fb4" text-anchor="middle">Principal Photo</text><text x="200" y="380" font-family="Arial" font-size="18" fill="%231a5fb4" text-anchor="middle">Mr. Francis Munyithya</text></svg>');
-            background-size: cover;
-            background-position: center;
+            background-color: #f0f0f0;
+        }
+        
+        .principal-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 5px solid #1a5fb4;
         }
         
         .photo-caption {
@@ -99,8 +101,7 @@
         }
         
         .message-container {
-            flex: 2;
-            min-width: 300px;
+            width: 100%;
         }
         
         .section-title {
@@ -221,23 +222,20 @@
         <p class="school-motto">"Education for a Brighter Future"</p>
     </header>
     
-   <div class="container">
-    <section class="principal-section">
-        <div class="photo-container">
-            <div class="principal-photo">
-                <img src="images\welcome.jpg" alt="Principal Francis Munyithya" />
+    <div class="container">
+        <section class="principal-section">
+            <div class="photo-container">
+                <div class="principal-photo">
+                    <img src="images/principal.jpg" alt="Principal Francis Munyithya" />
+                </div>
+                <div class="photo-caption">
+                    <p>Mr. Francis Munyithya</p>
+                    <p>Principal, Wachoro Boys High School</p>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-award"></i> Principal since 2015
+                </div>
             </div>
-            <div class="photo-caption">
-                <p>Mr. Francis Munyithya</p>
-                <p>Principal, Wachoro Boys High School</p>
-            </div>
-            <div class="badge">
-                <i class="fas fa-award"></i> Principal since 2015
-            </div>
-        </div>
-    </section>
-</div>
-
             
             <div class="message-container">
                 <h2 class="section-title">Principal's Message</h2>
